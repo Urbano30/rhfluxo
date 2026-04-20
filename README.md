@@ -1,2 +1,2 @@
 # rhfluxo
-repositorios relacionados ao app rhfluxo
+repositorio relacionados ao app rhfluxo
