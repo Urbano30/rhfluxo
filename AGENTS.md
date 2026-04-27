@@ -29,11 +29,12 @@ Bem-vindo ao monorepo. Você deve seguir rigidamente estas regras ao gerar códi
 - Para estado complexo e global, use `Zustand`. Evite Context API a menos que estritamente necessário (por performance).
 - Para formulários, sempre use `React Hook Form` integrado com `Zod` (através de resolvers).
 
-## 4. Testes 🧪
+## 4. Testes e TDD 🧪
 
-- Sempre que criar regras de negócio complexas (nos packages ou backend), escreva testes usando `Vitest`.
+- **TDD MANDATÓRIO:** Toda nova feature, regra de negócio ou componente deve ser iniciada **sempre** pela criação dos testes. Você (IA) deve primeiro escrever e me mostrar o teste, para só depois implementar o código para fazê-lo passar.
+- Sempre que criar regras de negócio complexas (nos packages ou backend), use `Vitest`.
 - Para componentes de UI interativos, use `React Testing Library`.
-- Ao propor uma nova feature, leve em conta os fluxos principais e sugira ou inclua a criação dos testes correspondentes.
+- NUNCA proponha uma implementação final de código sem antes validar os casos de teste correspondentes.
 
 ## 5. Práticas de Imports 📦
 
