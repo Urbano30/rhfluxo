@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "paths": {
+      "@repo/ui/*": ["../../packages/ui/src/*"],
+      "@repo/types/*": ["../../packages/types/src/*"],
+      "@repo/utils/*": ["../../packages/utils/src/*"],
+      "@repo/auth/*": ["../../packages/auth/src/*"],
+      "@repo/sdk/*": ["../../packages/sdk/src/*"],
+      "@repo/hooks/*": ["../../packages/hooks/src/*"],
+      "@repo/constants/*": ["../../packages/constants/src/*"]
+    }
+  }
+}
