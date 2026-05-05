@@ -1,1 +1,1 @@
-export const AUTH_VERSION = "1.0.0";
+export * from "./useAuthStore";
