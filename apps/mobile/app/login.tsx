@@ -8,7 +8,9 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  Image,
 } from "react-native";
+import logoImage from "../assets/logo.png";
 // import { useAuthStore } from '@repo/auth';
 
 export default function LoginScreen() {
@@ -26,10 +28,11 @@ export default function LoginScreen() {
 
         <View style={styles.content}>
           <View style={styles.header}>
-            <Text style={styles.logo}>
-              <Text style={{ color: "#f7863a" }}>rh</Text>
-              <Text style={{ color: "#4ea5b9" }}>fluxo</Text>
-            </Text>
+            <Image
+              source={logoImage}
+              style={styles.logo}
+              resizeMode="contain"
+            />
             <Text style={styles.title}>Bem-vindo de volta!</Text>
             <Text style={styles.subtitle}>Faça login para continuar</Text>
           </View>
@@ -116,8 +119,8 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   logo: {
-    fontFamily: "BalooBhaina2_700Bold",
-    fontSize: 56,
+    width: 200,
+    height: 72,
     marginBottom: 16,
   },
   title: {
