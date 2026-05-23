@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Users } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -27,53 +26,27 @@ export function LoginShowcase() {
       <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-white/60 rounded-full blur-[80px]"></div>
       <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-white/60 rounded-full blur-[80px]"></div>
 
-      {/* Dashed line decoration */}
-      <svg
-        className="absolute left-12 top-[130px] w-32 h-32 -z-10 opacity-20"
-        viewBox="0 0 100 100"
-        fill="none"
-      >
-        <path
-          d="M 10 10 Q 50 10 50 50 T 90 90"
-          stroke="#4ea5b9"
-          strokeWidth="2"
-          strokeDasharray="4 4"
-        />
-      </svg>
-
-      <div className="max-w-2xl z-10 mb-8 relative pl-4">
-        <div className="flex items-center mb-6 relative">
-          {/* Dashed line trailing to the icon */}
-          <div className="absolute -left-[100px] top-1/2 w-[100px] border-t-2 border-dashed border-[#4ea5b9] opacity-30"></div>
-
-          <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md z-10">
-            <Users className="w-8 h-8 text-[#4ea5b9]" />
-          </div>
-        </div>
-
-        <h2 className="text-[2.75rem] font-bold text-slate-800 leading-[1.15] mb-4">
+      <div className="max-w-2xl z-10 mb-4 relative pl-4">
+        <h2 className="text-[2.75rem] font-bold text-slate-800 leading-[1.15]">
           Gestão de pessoas
           <br />
           simples, completa e eficiente
         </h2>
-        <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-lg">
-          O RHFluxo conecta pessoas, processos e<br />
-          informações em um só lugar.
-        </p>
       </div>
 
       {/* Dashboard Preview inside a container that gets clipped */}
       {/* Centralized with smaller bottom margin */}
-      <div className="relative flex-1 w-full mt-4 flex justify-center items-end z-10 mb-2">
-        <div className="relative w-[90%] max-w-[1100px] h-full min-h-[300px] bg-white rounded-t-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100/50">
+      <div className="relative flex-1 w-full mt-4 flex justify-center items-center z-10 mb-2">
+        <div className="relative w-[95%] max-w-[1200px] h-full min-h-[300px]">
           {showcaseImages.map((src, index) => (
             <Image
               key={src}
               src={src}
               alt={`Dashboard Preview ${index + 1}`}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 1000px"
               className={cn(
-                "object-cover object-top transition-opacity duration-1000 ease-in-out",
+                "object-contain transition-opacity duration-1000 ease-in-out",
                 index === currentIndex ? "opacity-100" : "opacity-0",
               )}
               priority={index === 0}

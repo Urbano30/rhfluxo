@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Megaphone } from "lucide-react";
+import { Megaphone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface Notice {
@@ -24,74 +24,66 @@ const notices: Notice[] = [
     body: "Lembramos que o registro de ponto deve ser feito em até 10 min do horário.",
     type: "info",
   },
+  {
+    id: "3",
+    title: "Feriado",
+    body: "Na próxima sexta teremos ponto facultativo.",
+    type: "info",
+  },
+  {
+    id: "4",
+    title: "Treinamento",
+    body: "Treinamento de CIPA às 14h na sala 3.",
+    type: "alerta",
+  },
 ];
 
 export function NoticesSection() {
   const [current, setCurrent] = useState(0);
   const notice = notices[current];
 
-  const prev = () =>
-    setCurrent((c) => (c - 1 + notices.length) % notices.length);
-  const next = () => setCurrent((c) => (c + 1) % notices.length);
-
   return (
-    <div>
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-base font-semibold text-slate-700">
-          Avisos da empresa
-        </h3>
+    <Card className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col h-full">
+      <div className="flex items-center justify-between mb-8">
+        <h3 className="text-base font-bold text-slate-800">Quadro de Avisos</h3>
         <a
           href="#"
-          className="text-sm font-medium text-[#4ea5b9] hover:underline"
+          className="text-sm font-semibold text-[#0e7c94] hover:underline"
         >
           Ver todos
         </a>
       </div>
 
-      <Card className="bg-[#fff8f4] border border-[#f7863a]/20 shadow-none p-4 rounded-2xl">
-        <div className="flex items-start gap-3">
-          <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#f7863a]/15 shrink-0">
-            <Megaphone className="h-5 w-5 text-[#f7863a]" />
+      <div className="bg-[#fff6f0] flex-1 rounded-2xl p-8 flex flex-col justify-center relative">
+        <div className="flex items-center gap-6 mb-6">
+          <div className="flex items-center justify-center w-[72px] h-[72px] rounded-full bg-white shrink-0 border border-orange-100">
+            <Megaphone className="h-8 w-8 text-[#f7863a]" strokeWidth={1.5} />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-bold text-[#f7863a] mb-1">
+            <p className="text-xl font-bold text-[#d9651b] mb-2">
               {notice.title}
             </p>
-            <p className="text-sm text-slate-600 leading-snug">{notice.body}</p>
+            <p className="text-[0.95rem] font-medium text-slate-700 leading-snug">
+              {notice.body}
+            </p>
           </div>
         </div>
 
         {notices.length > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <button
-              onClick={prev}
-              className="p-1 rounded-full hover:bg-slate-100 transition-colors"
-              aria-label="Anterior"
-            >
-              <ChevronLeft className="h-4 w-4 text-slate-400" />
-            </button>
-            <div className="flex gap-1.5">
-              {notices.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`h-1.5 rounded-full transition-all ${
-                    i === current ? "w-4 bg-[#f7863a]" : "w-1.5 bg-slate-200"
-                  }`}
-                  aria-label={`Aviso ${i + 1}`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={next}
-              className="p-1 rounded-full hover:bg-slate-100 transition-colors"
-              aria-label="Próximo"
-            >
-              <ChevronRight className="h-4 w-4 text-slate-400" />
-            </button>
+          <div className="absolute bottom-6 left-0 right-0 flex items-center justify-center gap-3">
+            {notices.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`h-2.5 rounded-full transition-all ${
+                  i === current ? "w-2.5 bg-[#f7863a]" : "w-2.5 bg-slate-300"
+                }`}
+                aria-label={`Aviso ${i + 1}`}
+              />
+            ))}
           </div>
         )}
-      </Card>
-    </div>
+      </div>
+    </Card>
   );
 }
