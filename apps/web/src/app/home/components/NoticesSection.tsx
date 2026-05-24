@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Megaphone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface Notice {
@@ -56,8 +55,14 @@ export function NoticesSection() {
 
       <div className="bg-[#fff6f0] flex-1 rounded-2xl p-8 flex flex-col justify-center relative">
         <div className="flex items-center gap-6 mb-6">
-          <div className="flex items-center justify-center w-[72px] h-[72px] rounded-full bg-white shrink-0 border border-orange-100">
-            <Megaphone className="h-8 w-8 text-[#f7863a]" strokeWidth={1.5} />
+          <div className="relative w-28 h-28 shrink-0 flex items-center justify-center">
+            {/* <Megaphone className="h-8 w-8 text-[#f7863a]" strokeWidth={1.5} /> */}
+            <div className="absolute inset-0 bg-[#b7e1eb] rounded-full " />
+            <img
+              src="/icon-megaphone.png"
+              alt="Ícone de aviso"
+              className="absolute top-0 left-2"
+            />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-xl font-bold text-[#d9651b] mb-2">

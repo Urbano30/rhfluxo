@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Palmtree, Plane } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 export function VacationSection() {
   return (
@@ -18,21 +18,15 @@ export function VacationSection() {
       <div className="flex items-center gap-6 mb-8 flex-1">
         {/* Illustration Placeholder */}
         <div className="relative w-28 h-28 shrink-0 flex items-center justify-center">
-          <div className="absolute inset-0 bg-[#e4eff5] rounded-full opacity-60" />
+          <div className="absolute inset-0 bg-[#FFF6F0] rounded-full " />
           <div className="absolute bottom-4 w-20 h-2 bg-[#0e7c94]/20 rounded-full blur-sm" />
-          <Palmtree
-            className="h-14 w-14 text-[#0e7c94] absolute bottom-6 right-8"
-            strokeWidth={1.5}
+          <img
+            src="/icon-vacation.png"
+            alt="Ícone de férias"
+            className=" absolute top-3 left-4"
           />
-          <Palmtree
-            className="h-10 w-10 text-[#0e7c94]/70 absolute bottom-6 left-6"
-            strokeWidth={1.5}
-          />
-          <Plane
-            className="h-6 w-6 text-[#0e7c94] absolute top-4 left-4 -rotate-45"
-            strokeWidth={1.5}
-          />
-          <div className="absolute bottom-6 w-24 h-1 bg-[#0e7c94] rounded-full" />
+
+          {/*<div className="absolute bottom-6 w-24 h-1 bg-[#0e7c94] rounded-full" />*/}
         </div>
 
         <div className="flex flex-col justify-center">
