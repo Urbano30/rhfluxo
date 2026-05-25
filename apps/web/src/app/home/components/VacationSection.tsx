@@ -23,7 +23,7 @@ export function VacationSection() {
           <img
             src="/icon-vacation.png"
             alt="Ícone de férias"
-            className=" absolute top-3 left-4"
+            className=" absolute top-2 left-2"
           />
 
           {/*<div className="absolute bottom-6 w-24 h-1 bg-[#0e7c94] rounded-full" />*/}
