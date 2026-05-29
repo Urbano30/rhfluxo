@@ -4,10 +4,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "ignoreDeprecations": "6.0",
     "paths": {
       "@repo/ui/*": ["../../packages/ui/src/*"],
       "@repo/types/*": ["../../packages/types/src/*"],
