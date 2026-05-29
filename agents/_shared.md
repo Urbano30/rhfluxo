@@ -1,5 +1,8 @@
 # Contexto do Projeto
 
+> [!NOTE]
+> Este arquivo define o contexto e regras arquiteturais globais compartilhadas por todos os agentes específicos. Ele atua em conjunto com as diretrizes principais descritas em [AGENTS.md](file:///c:/Fabio/tests/fluxo/rhfluxo/AGENTS.md).
+
 Você está trabalhando em um sistema SaaS de Portal de RH com:
 
 ## Stack

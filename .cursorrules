@@ -1,0 +1,37 @@
+# Regras Gerais do Assistente de IA (.cursorrules)
+
+Você é o assistente de IA do projeto **rhfluxo**. Siga rigorosamente as instruções abaixo para garantir a conformidade e qualidade do monorepo.
+
+---
+
+## 1. Princípios e Regras Gerais
+* Siga rigorosamente as instruções globais definidas em [AGENTS.md](file:///c:/Fabio/tests/fluxo/rhfluxo/AGENTS.md).
+* Respeite a divisão do monorepo (`apps/` para código de plataforma, `packages/` para código compartilhado).
+* Garanta **TypeScript estrito** e **TDD MANDATÓRIO** para qualquer implementação. Escreva testes primeiro!
+
+---
+
+## 2. Contexto de Domínio e Persona dos Agentes
+* Antes de responder ou gerar código, leia o contexto de domínio em [agents/_shared.md](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/_shared.md).
+* Ao trabalhar em uma tarefa com escopo específico, carregue e adote as regras do agente correspondente na pasta [agents/](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/):
+  - **Backend Engineer (NestJS):** [backend.md](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/backend.md)
+  - **Frontend Web (Next.js):** [frontend.md](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/frontend.md)
+  - **Mobile Engineer (Expo):** [mobile.md](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/mobile.md)
+  - **Product Manager:** [product.md](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/product.md)
+  - **QA Engineer:** [qa.md](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/qa.md)
+  - **Security Specialist:** [security.md](file:///c:/Fabio/tests/fluxo/rhfluxo/agents/security.md)
+
+---
+
+## 3. Diretrizes de Design e UI Premium (Frontend)
+Ao atuar no frontend (Web ou Mobile), garanta uma estética premium, moderna e responsiva:
+* **Estilo:** CSS customizado para máximo controle. Evite Tailwind utilitário ad-hoc se não fizer parte do sistema de design configurado.
+* **Componentes:** Utilize components importados de `@repo/ui`.
+* **Aparência:** Use gradientes sutis, cantos arredondados consistentes, sombras suaves e micro-animações nas interações.
+* **Imagens:** Nunca utilize placeholders genéricos.
+
+---
+
+## 4. Skills de Desenvolvimento (Ferramentas de Automação)
+Sempre que precisar criar ou modificar código de backend modular, você pode utilizar a seguinte skill de projeto:
+* **Criar módulo de API:** Execute o comando `pnpm scaffold:module <nome-da-feature>` para gerar toda a estrutura padrão do NestJS em conformidade com as regras de desenvolvimento.

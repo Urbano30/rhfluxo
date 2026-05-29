@@ -1,5 +1,5 @@
 {
-  "name": "@repo/sdk",
+  "name": "@repo/mocks",
   "version": "1.0.0",
   "private": true,
   "main": "./src/index.ts",
@@ -9,7 +9,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/mocks": "workspace:*",
     "@repo/types": "workspace:*"
   },
   "devDependencies": {

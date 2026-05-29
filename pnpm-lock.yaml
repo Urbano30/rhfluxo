@@ -195,6 +195,12 @@ importers:
       "@hookform/resolvers":
         specifier: ^5.2.2
         version: 5.2.2(react-hook-form@7.74.0(react@19.2.4))
+      "@repo/sdk":
+        specifier: workspace:*
+        version: link:../../packages/sdk
+      "@repo/types":
+        specifier: workspace:*
+        version: link:../../packages/types
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -300,7 +306,24 @@ importers:
         specifier: latest
         version: 6.0.3
 
+  packages/mocks:
+    dependencies:
+      "@repo/types":
+        specifier: workspace:*
+        version: link:../types
+    devDependencies:
+      typescript:
+        specifier: latest
+        version: 6.0.3
+
   packages/sdk:
+    dependencies:
+      "@repo/mocks":
+        specifier: workspace:*
+        version: link:../mocks
+      "@repo/types":
+        specifier: workspace:*
+        version: link:../types
     devDependencies:
       typescript:
         specifier: latest

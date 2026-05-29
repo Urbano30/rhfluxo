@@ -18,4 +18,22 @@ export const AuthLoginSchema = z.object({
 
 export type AuthLoginDTO = z.infer<typeof AuthLoginSchema>;
 
+// --- MÓDULO DE FÉRIAS (VACATION) ---
+
+export const VacationStatusSchema = z.enum(["PENDING", "APPROVED", "REJECTED"]);
+export type VacationStatus = z.infer<typeof VacationStatusSchema>;
+
+export const VacationSchema = z.object({
+  id: z.string().uuid(),
+  userId: z.string().uuid(),
+  startDate: z.string(), // data formato ISO (ex: "2026-07-15")
+  endDate: z.string(), // data formato ISO
+  days: z.number().int().min(1),
+  status: VacationStatusSchema,
+  acquisitionPeriodStart: z.string(), // data formato ISO
+  acquisitionPeriodEnd: z.string(), // data formato ISO
+});
+
+export type VacationDTO = z.infer<typeof VacationSchema>;
+
 // Exporte tudo para ser usado nos Apps e na API.
