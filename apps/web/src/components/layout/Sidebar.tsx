@@ -53,23 +53,21 @@ export function Sidebar() {
           const isActive = label === "Início" && isHome;
           return (
             <Tooltip key={label}>
-              <TooltipTrigger asChild>
-                <div
+              <TooltipTrigger
+                className={cn(
+                  "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium select-none w-full border-0 bg-transparent text-left",
+                  isActive
+                    ? "bg-[#4ea5b9]/10 text-[#4ea5b9] cursor-default"
+                    : "text-slate-500 cursor-pointer hover:bg-slate-50/50",
+                )}
+              >
+                <Icon
                   className={cn(
-                    "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium select-none",
-                    isActive
-                      ? "bg-[#4ea5b9]/10 text-[#4ea5b9] cursor-default"
-                      : "text-slate-500 cursor-default",
+                    "h-5 w-5 shrink-0",
+                    isActive ? "text-[#4ea5b9]" : "text-slate-400",
                   )}
-                >
-                  <Icon
-                    className={cn(
-                      "h-5 w-5 shrink-0",
-                      isActive ? "text-[#4ea5b9]" : "text-slate-400",
-                    )}
-                  />
-                  {label}
-                </div>
+                />
+                {label}
               </TooltipTrigger>
               <TooltipContent side="right">{label}</TooltipContent>
             </Tooltip>
