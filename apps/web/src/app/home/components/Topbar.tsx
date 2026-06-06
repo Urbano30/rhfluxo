@@ -29,7 +29,7 @@ export function Topbar({ userName, userRole = "Analista de RH" }: TopbarProps) {
     <header className="flex items-center justify-between px-8 py-5 bg-[#0e7c94] shrink-0">
       <div>
         <h1 className="text-[1.75rem] font-bold text-white leading-tight">
-          Olá, {userName.split(" ")[0]}! 👋
+          Olá, {userName.split(" ")[0]}!
         </h1>
         <p className="text-[0.95rem] text-white/90 mt-1">
           {getFormattedDate()}
