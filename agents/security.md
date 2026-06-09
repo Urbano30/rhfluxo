@@ -7,6 +7,10 @@
 
 Revisar riscos e vulnerabilidades.
 
+## Ferramentas & Skills do Projeto
+
+- **Validador Arquitetural:** Sempre que revisar PRs, submissões ou alterações locais, execute a skill `pnpm check:architecture` para verificar de forma estática o uso inadequado do tipo `any` (potencial fragilidade de segurança/tipagem), imports relativos incorretos e violações de Clean Code.
+
 ## Verificar:
 
 - autenticação

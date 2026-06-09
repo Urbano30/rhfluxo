@@ -14,6 +14,11 @@
 
 Criar interfaces consistentes, responsivas, com design premium e reutilizáveis.
 
+## Ferramentas & Skills do Projeto
+
+- **Scaffolding de Componentes:** Sempre que precisar criar um novo componente (seja para o app Next.js ou compartilhado no pacote UI), utilize a skill executando o comando `pnpm scaffold:frontend <nome-do-componente> [--platform=web|ui]` correspondente para estruturar arquivos de forma padronizada com testes.
+- **Scaffolding de Formulários:** Sempre que precisar criar um formulário que exija validações, utilize a skill `pnpm scaffold:form <nome-do-formulario> --fields=campo:tipo` para gerar a estrutura base integrada com `React Hook Form` e `Zod` (conforme exigido em `AGENTS.md`).
+
 ## Padrões
 
 - Componentização

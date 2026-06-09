@@ -9,7 +9,10 @@
     "test": "turbo run test",
     "clean": "turbo run clean && rm -rf node_modules",
     "prepare": "husky",
-    "scaffold:module": "node scripts/scaffold-module.mjs"
+    "scaffold:module": "node scripts/scaffold-module.mjs",
+    "scaffold:frontend": "node scripts/scaffold-frontend.mjs",
+    "scaffold:form": "node scripts/scaffold-form.mjs",
+    "check:architecture": "node scripts/check-architecture.mjs"
   },
   "devDependencies": {
     "eslint": "^9.39.4",
